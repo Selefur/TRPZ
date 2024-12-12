@@ -37,7 +37,7 @@ namespace DAL.Tests
             var mockDbSet = new Mock<DbSet<User>>();
             mockContext.Setup(context => context.Set<User>()).Returns(mockDbSet.Object);
 
-            var expectedUser = new User { Id = 1, Department = "department", Email = "email", Name = "name", Password = "password", Staus = Enums.UserStaus.Employee};
+            var expectedUser = new User { Id = 1, Department = "department", Email = "email", Name = "name", Password = "password", Staus = Enums.UserStatus.Employee};
             mockDbSet.Setup(dbSet => dbSet.Find(expectedUser.Id)).Returns(expectedUser);
 
             var repository = new TestUserRepository(mockContext.Object);
@@ -59,7 +59,7 @@ namespace DAL.Tests
             var mockDbSet = new Mock<DbSet<User>>();
             mockContext.Setup(context => context.Set<User>()).Returns(mockDbSet.Object);
 
-            var expectedUser = new User { Id = 1, Department = "department", Email = "email", Name = "name", Password = "password", Staus = Enums.UserStaus.Employee };
+            var expectedUser = new User { Id = 1, Department = "department", Email = "email", Name = "name", Password = "password", Staus = Enums.UserStatus.Employee };
             mockDbSet.Setup(mock => mock.Find(expectedUser.Id)).Returns(expectedUser);
 
             var repository = new TestUserRepository(mockContext.Object);

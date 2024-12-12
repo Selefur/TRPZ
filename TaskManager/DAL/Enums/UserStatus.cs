@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Enums
 {
-    public enum UserStaus
+    public enum UserStatus
     {
         Employer,
         Employee

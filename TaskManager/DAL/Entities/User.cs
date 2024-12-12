@@ -14,6 +14,6 @@ namespace DAL.Entities
         public required string Email { get; set; }
         public required string Password { get; set; }
         public required string Department { get; set; }
-        public required UserStaus Staus { get; set; }
+        public required UserStatus Staus { get; set; }
     }
 }
