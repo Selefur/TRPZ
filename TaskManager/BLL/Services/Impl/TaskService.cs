@@ -11,6 +11,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 
 namespace BLL.Services.Impl
 {
@@ -33,7 +34,7 @@ namespace BLL.Services.Impl
         {
             var user = SecurityContext.GetUser();
             var userType = user.GetType();
-            if (userType != typeof(Employee) && userType != typeof(Employer))
+            if (user is null)
             {
                 throw new MethodAccessException();
             }
